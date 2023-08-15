@@ -97,3 +97,9 @@ trees[i]
 i <- seq(1:3) #seq(from=1,to=3)
 trees[i]
 ```
+
+```{r}
+trees[3] <- "oak"
+#reassigned the value based on the position
+trees
+```
