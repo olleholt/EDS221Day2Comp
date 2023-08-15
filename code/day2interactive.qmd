@@ -8,6 +8,7 @@ execute:
 
 ```{r}
 library(tidyverse)
+library(here)
 ```
 
 ## Making and Indexing data in R
