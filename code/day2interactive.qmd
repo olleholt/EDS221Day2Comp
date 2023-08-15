@@ -6,6 +6,10 @@ execute:
   warning: false
 ---
 
+```{r}
+library(tidyverse)
+```
+
 ## Making and Indexing data in R
 
 ### Vectors
@@ -145,4 +149,29 @@ class(ttest_example)
 ttest_example$p.value
 ```
 
-The mean size for trees in Site A is greater than the mean size in Site B (...my statistical summary, `r ttest_example$p.value`)
+The mean size for trees in Site A is greater than the mean size in Site B (...my statistical summary, `r ttest_example$p.value`).
+
+## Data frames
+
+```{r}
+fruit <- data.frame(type = c("apple", "banana", "paech"),
+                    mass = c(130, 195, 150))
+
+class(fruit)
+
+fruit
+
+fruit[3, 2]
+
+purrr::pluck(fruit, "type", 2)
+fruit$type[2]
+
+starwars$starships[1]
+
+starwars$starships[[1]][1]
+
+starwars$starships[[1]][2]
+
+#or this way, more intuitive
+purrr::pluck(starwars, "starships", 1, 2)
+```
